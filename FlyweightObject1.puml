@@ -1,0 +1,82 @@
+@startuml
+
+class Character {
+    - character: char
+    - characterProperty: CharacterProperties
+
+    + Character(character: char, characterProperty: CharacterProperties)
+    + getCharacter(): char
+    + setCharacter(character: char): void
+    + getCharacterProperty(): CharacterProperties
+    + setCharacterProperty(characterProperty: CharacterProperties): void
+}
+
+class CharacterProperties {
+    - font: String
+    - color: String
+    - size: int
+
+    + CharacterProperties(font: String, color: String, size: int)
+    + getFont(): String
+    + setFont(font: String): void
+    + getColor(): String
+    + setColor(color: String): void
+    + getSize(): int
+    + setSize(size: int): void
+}
+
+Character --> CharacterProperties
+
+object "HelloWorldCS5800: Document" as doc {
+    characters:
+    [0] Character:
+        - character: 'H'
+        - characterProperty: CharacterProperties(font = "Arial", color = "Black", size = 16)
+    [1] Character:
+        - character: 'e'
+        - characterProperty: CharacterProperties(font = "Arial", color = "Black", size = 14)
+    [2] Character:
+        - character: 'l'
+        - characterProperty: CharacterProperties(font = "Arial", color = "Black", size = 14)
+    [3] Character:
+        - character: 'l'
+        - characterProperty: CharacterProperties(font = "Arial", color = "Black", size = 14)
+    [4] Character:
+        - character: 'o'
+        - characterProperty: CharacterProperties(font = "Arial", color = "Black", size = 14)
+    [5] Character:
+        - character: 'W'
+        - characterProperty: CharacterProperties(font = "Arial", color = "Black", size = 16)
+    [6] Character:
+        - character: 'o'
+        - characterProperty: CharacterProperties(font = "Arial", color = "Black", size = 14)
+    [7] Character:
+        - character: 'r'
+        - characterProperty: CharacterProperties(font = "Arial", color = "Black", size = 14)
+    [8] Character:
+        - character: 'l'
+        - characterProperty: CharacterProperties(font = "Arial", color = "Black", size = 14)
+    [9] Character:
+        - character: 'd'
+        - characterProperty: CharacterProperties(font = "Arial", color = "Black", size = 14)
+    [10] Character:
+        - character: 'C'
+        - characterProperty: CharacterProperties(font = "Verdana", color = "Blue", size = 18)
+    [11] Character:
+        - character: 'S'
+        - characterProperty: CharacterProperties(font = "Verdana", color = "Blue", size = 18)
+    [12] Character:
+        - character: '5'
+        - characterProperty: CharacterProperties(font = "Verdana", color = "Red", size = 12)
+    [13] Character:
+        - character: '8'
+        - characterProperty: CharacterProperties(font = "Verdana", color = "Red", size = 12)
+    [14] Character:
+        - character: '0'
+        - characterProperty: CharacterProperties(font = "Verdana", color = "Red", size = 12)
+    [15] Character:
+        - character: '0'
+        - characterProperty: CharacterProperties(font = "Verdana", color = "Red", size = 12)
+}
+
+@enduml
